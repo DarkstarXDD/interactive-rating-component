@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Overpass";
+  src: url("/assets/fonts/Overpass-VariableFont_wght.woff2");
+}
+
+/* ------------------- CSS Reset ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 0.125rem dotted green;
+  outline-offset: 0.125rem;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* ------------------- CSS Variables ------------------- */
+:root {
+  --ff-overpass: "Overpass", sans-serif;
+
+  --fs-400: 1rem;
+  --fs-900: 1.75rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(217, 12%, 63%);
+
+  --clr-primary-400: hsl(25, 97%, 53%);
+  --clr-primary-600: hsl(213, 19%, 18%);
+  --clr-primary-900: hsl(216, 12%, 8%);
+
+  --clr-gradient-top: hsl(215, 20%, 17%);
+  --clr-graddient-bottom: hsl(216, 24%, 12%);
+}
+
+body {
+  font-family: var(--ff-overpass);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  background-color: grey;
+}
