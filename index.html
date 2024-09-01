@@ -42,6 +42,41 @@
   </head>
 
   <body>
-    Interactive Rating Component
+    <main class="main">
+      <div class="card">
+        <div class="card__star-icon-wrapper">
+          <img
+            class="card__star-icon"
+            src="/assets/images/icon-star.svg"
+            alt=""
+          />
+        </div>
+        <h2 class="card__heading">How did we do?</h2>
+        <p class="card__text">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form action="thanks.html" class="card__form">
+          <fieldset class="card__fieldset">
+            <legend class="visually-hidden">Numbers Rating</legend>
+            <input type="radio" name="rating" value="1" id="rating-1" />
+            <label for="rating-1">1</label>
+
+            <input type="radio" name="rating" value="2" id="rating-2" />
+            <label for="rating-2">2</label>
+
+            <input type="radio" name="rating" value="3" id="rating-3" />
+            <label for="rating-3">3</label>
+
+            <input type="radio" name="rating" value="4" id="rating-4" />
+            <label for="rating-4">4</label>
+
+            <input type="radio" name="rating" value="5" id="rating-5" />
+            <label for="rating-5">5</label>
+          </fieldset>
+          <button class="card__submit-button">Submit</button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
