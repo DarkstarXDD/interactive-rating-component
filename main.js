@@ -1,24 +1,28 @@
+const errorElem = document.querySelector(".card__error")
+const resultElem = document.querySelector(".card__result")
+const welcomeScreen = document.querySelector(".card--primary")
+const thankScreen = document.querySelector(".card--secondary")
+let rating
+
+function isRadioSelected() {
+  const radioButtons = document.getElementsByName("rating")
+  for (let i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      rating = radioButtons[i].value
+      return true
+    }
+  }
+  return false
+}
+
 document.querySelector(".card__form").addEventListener("submit", (event) => {
   event.preventDefault()
-  console.log("Submit Clicked")
-})
-
-const ratingRadioButtons = document.getElementsByName("rating")
-const resultTextElem = document.querySelector(".card__result")
-let isRadioSelected = false
-
-for (let i = 0; i < ratingRadioButtons.length; i++) {
-  if (ratingRadioButtons[i].checked) {
-    isRadioSelected = true
+  if (!isRadioSelected()) {
+    errorElem.classList.remove("visually-hidden")
+    errorElem.innerHTML = "<p>Please select a rating</p>"
+  } else {
+    welcomeScreen.classList.add("card--hidden")
+    thankScreen.classList.remove("card--hidden")
+    resultElem.innerHTML = `You selected ${rating} out of 5`
   }
-}
-
-console.log(isRadioSelected)
-
-const searchParamsObj = new URLSearchParams(window.location.search)
-const rating = searchParamsObj.get("rating")
-
-const resultText = `You selected ${rating} out of 5`
-if (resultTextElem) {
-  resultTextElem.innerHTML = resultText
-}
+})

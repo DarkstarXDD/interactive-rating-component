@@ -47,6 +47,7 @@ button {
   --clr-neutral-200: hsl(217, 12%, 63%);
 
   --clr-primary-400: hsl(25, 97%, 53%);
+  --clr-primary-500: hsl(355, 77%, 76%);
   --clr-primary-600: hsl(213, 19%, 18%);
   --clr-primary-900: hsl(216, 12%, 8%);
 
@@ -117,12 +118,16 @@ body {
 .card__form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 2rem; */
   margin-top: 1.5rem;
 }
 
 .card__fieldset {
   border: none;
+}
+
+.card__error {
+  color: var(--clr-primary-500);
 }
 
 .card__submit-button {
@@ -138,6 +143,7 @@ body {
   transition:
     background-color 0.1s ease,
     border-color 0.1s ease;
+  margin-top: 2rem;
 }
 
 .card__submit-button:active {
@@ -185,4 +191,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.card--hidden {
+  display: none;
 }
