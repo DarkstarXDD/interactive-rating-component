@@ -126,6 +126,23 @@ body {
   border: none;
 }
 
+.card__radio {
+  appearance: none;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--clr-primary-600);
+  border-radius: 100vw;
+}
+
+.card__radio:hover {
+  cursor: pointer;
+  background-color: var(--clr-neutral-100);
+}
+
+.card__radio:checked {
+  background-color: var(--clr-primary-400);
+}
+
 .card__error {
   color: var(--clr-primary-500);
 }
@@ -182,6 +199,7 @@ body {
 
 .card__thankyou {
   font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
   color: var(--clr-neutral-100);
 }
 
