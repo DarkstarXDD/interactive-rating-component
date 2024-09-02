@@ -118,28 +118,63 @@ body {
 .card__form {
   display: flex;
   flex-direction: column;
-  /* gap: 2rem; */
   margin-top: 1.5rem;
 }
 
 .card__fieldset {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: none;
+}
+
+.card__radio-wrapper {
+  position: relative;
 }
 
 .card__radio {
   appearance: none;
+  position: absolute;
+}
+
+.card__radio-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 3rem;
   height: 3rem;
+  font-weight: var(--fw-bold);
+  line-height: 1;
   background-color: var(--clr-primary-600);
   border-radius: 100vw;
+  transition: background-color 0.2s ease;
 }
 
-.card__radio:hover {
-  cursor: pointer;
-  background-color: var(--clr-neutral-100);
+.card__radio:focus-visible {
+  outline: none;
 }
 
-.card__radio:checked {
+.card__radio:focus-visible + .card__radio-label {
+  outline: 0.125rem dotted var(--clr-primary-400);
+  outline-offset: 0.125rem;
+}
+
+.card__radio-label:active {
+  color: var(--clr-primary-600);
+  background-color: var(--clr-primary-400);
+  scale: 0.95;
+}
+
+@media (hover: hover) {
+  .card__radio-label:hover {
+    cursor: pointer;
+    color: var(--clr-primary-600);
+    background-color: var(--clr-primary-400);
+  }
+}
+
+.card__radio:checked + .card__radio-label {
+  color: var(--clr-primary-600);
   background-color: var(--clr-primary-400);
 }
 
@@ -157,10 +192,10 @@ body {
   border: 2px solid var(--clr-primary-400);
   border-radius: 100vw;
   padding: 0.75rem;
+  margin-top: 2rem;
   transition:
     background-color 0.1s ease,
     border-color 0.1s ease;
-  margin-top: 2rem;
 }
 
 .card__submit-button:active {
