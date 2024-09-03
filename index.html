@@ -44,86 +44,80 @@
   <body>
     <main class="main">
       <div class="card card--primary">
-        <div class="card__star-icon-wrapper">
-          <img
-            class="card__star-icon"
-            src="/assets/images/icon-star.svg"
-            alt=""
-          />
+        <div class="star-icon-wrapper">
+          <img class="star-icon" src="/assets/images/icon-star.svg" alt="" />
         </div>
-        <h2 class="card__heading">How did we do?</h2>
-        <p class="card__text">
+        <h2 class="heading">How did we do?</h2>
+        <p class="text">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <form action="#" class="card__form">
-          <fieldset class="card__fieldset">
+        <form class="form">
+          <fieldset class="fieldset">
             <legend class="visually-hidden">Numbers Rating</legend>
-            <div class="card__radio-wrapper">
+            <div class="radio-wrapper">
               <input
                 type="radio"
                 name="rating"
                 value="1"
                 id="rating-1"
-                class="card__radio visually-hidden"
+                class="radio-button visually-hidden"
               />
-              <label for="rating-1" class="card__radio-label">1</label>
+              <label for="rating-1" class="radio-label">1</label>
             </div>
-
-            <div class="card__radio-wrapper">
+            <div class="radio-wrapper">
               <input
                 type="radio"
                 name="rating"
                 value="2"
                 id="rating-2"
-                class="card__radio visually-hidden"
+                class="radio-button visually-hidden"
               />
-              <label for="rating-2" class="card__radio-label">2</label>
+              <label for="rating-2" class="radio-label">2</label>
             </div>
-
-            <div class="card__radio-wrapper">
+            <div class="radio-wrapper">
               <input
                 type="radio"
                 name="rating"
                 value="3"
                 id="rating-3"
-                class="card__radio"
+                class="radio-button visually-hidden"
               />
-              <label for="rating-3" class="card__radio-label">3</label>
+              <label for="rating-3" class="radio-label">3</label>
             </div>
-
-            <div class="card__radio-wrapper">
+            <div class="radio-wrapper">
               <input
                 type="radio"
                 name="rating"
                 value="4"
                 id="rating-4"
-                class="card__radio"
+                class="radio-button visually-hidden"
               />
-              <label for="rating-4" class="card__radio-label">4</label>
+              <label for="rating-4" class="radio-label">4</label>
             </div>
-
-            <input
-              type="radio"
-              name="rating"
-              value="5"
-              id="rating-5"
-              class="card__radio"
-            />
-            <label for="rating-5" class="card__radio-label">5</label>
+            <div class="radio-wrapper">
+              <input
+                type="radio"
+                name="rating"
+                value="5"
+                id="rating-5"
+                class="radio-button visually-hidden"
+              />
+              <label for="rating-5" class="radio-label">5</label>
+            </div>
           </fieldset>
-          <div aria-live="assertive" class="card__error visually-hidden"></div>
-          <button class="card__submit-button">Submit</button>
+          <div aria-live="assertive" class="error-div visually-hidden"></div>
+          <button class="submit-button">Submit</button>
         </form>
       </div>
 
       <div aria-live="assertive" class="card card--secondary card--hidden">
         <img src="/assets/images/illustration-thank-you.svg" alt="" />
-        <div class="card__result-wrapper">
-          <p class="card__result"></p>
+        <div class="result-wrapper">
+          <p class="result"></p>
         </div>
-        <div class="card__appreciation">
-          <h2 class="card__thankyou">Thank You!</h2>
+        <div class="thankyou-wrapper">
+          <h2 class="thankyou-heading">Thank You!</h2>
           <p>
             We appreciate you taking the time to give a rating. If you ever need
             more support, don’t hesitate to get in touch!

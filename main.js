@@ -1,5 +1,5 @@
-const errorElem = document.querySelector(".card__error")
-const resultElem = document.querySelector(".card__result")
+const errorElem = document.querySelector(".error-div")
+const resultElem = document.querySelector(".result")
 const welcomeScreen = document.querySelector(".card--primary")
 const thankScreen = document.querySelector(".card--secondary")
 let rating
@@ -15,7 +15,7 @@ function isRadioSelected() {
   return false
 }
 
-document.querySelector(".card__form").addEventListener("submit", (event) => {
+document.querySelector(".form").addEventListener("submit", (event) => {
   event.preventDefault()
   if (!isRadioSelected()) {
     errorElem.classList.remove("visually-hidden")
