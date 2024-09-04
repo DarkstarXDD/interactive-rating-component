@@ -86,7 +86,7 @@ body {
     var(--clr-gradient-inner) 0%,
     var(--clr-graddient-outer) 100%
   );
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 2rem;
 }
 
@@ -214,6 +214,10 @@ body {
   align-items: center;
   text-align: center;
   gap: 2rem;
+}
+
+.thankyou-img {
+  width: 10.125rem;
 }
 
 .result-wrapper {
