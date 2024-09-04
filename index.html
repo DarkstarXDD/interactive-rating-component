@@ -43,7 +43,7 @@
 
   <body>
     <main class="main">
-      <div class="card card--primary">
+      <div class="card card--welcome">
         <div class="star-icon-wrapper">
           <img class="star-icon" src="/assets/images/icon-star.svg" alt="" />
         </div>
@@ -54,7 +54,7 @@
         </p>
         <form class="form">
           <fieldset class="fieldset">
-            <legend class="visually-hidden">Numbers Rating</legend>
+            <legend class="visually-hidden">Ratings</legend>
             <div class="radio-wrapper">
               <input
                 type="radio"
@@ -111,10 +111,12 @@
         </form>
       </div>
 
-      <div aria-live="assertive" class="card card--secondary card--hidden">
+      <div aria-live="assertive" class="card card--thankyou card--hidden">
         <img src="/assets/images/illustration-thank-you.svg" alt="" />
         <div class="result-wrapper">
-          <p class="result"></p>
+          <p class="result">
+            You selected <span class="result-span"></span> out of 5
+          </p>
         </div>
         <div class="thankyou-wrapper">
           <h2 class="thankyou-heading">Thank You!</h2>

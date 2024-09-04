@@ -207,7 +207,7 @@ body {
   }
 }
 
-.card--secondary {
+.card--thankyou {
   display: flex;
   flex-direction: column;
   justify-content: center;

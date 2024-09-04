@@ -1,28 +1,21 @@
 const errorElem = document.querySelector(".error-div")
-const resultElem = document.querySelector(".result")
-const welcomeScreen = document.querySelector(".card--primary")
-const thankScreen = document.querySelector(".card--secondary")
+const resultElem = document.querySelector(".result-span")
+const welcomeScreen = document.querySelector(".card--welcome")
+const thankYouScreen = document.querySelector(".card--thankyou")
+const errorMessage = "Please select a rating"
 let rating
-
-function isRadioSelected() {
-  const radioButtons = document.getElementsByName("rating")
-  for (let i = 0; i < radioButtons.length; i++) {
-    if (radioButtons[i].checked) {
-      rating = radioButtons[i].value
-      return true
-    }
-  }
-  return false
-}
 
 document.querySelector(".form").addEventListener("submit", (event) => {
   event.preventDefault()
-  if (!isRadioSelected()) {
+  const formData = new FormData(event.target)
+  const rating = formData.get("rating")
+
+  if (!rating) {
     errorElem.classList.remove("visually-hidden")
-    errorElem.innerHTML = "<p>Please select a rating</p>"
+    errorElem.innerHTML = `<p>${errorMessage}</P`
   } else {
     welcomeScreen.classList.add("card--hidden")
-    thankScreen.classList.remove("card--hidden")
-    resultElem.innerHTML = `You selected ${rating} out of 5`
+    thankYouScreen.classList.remove("card--hidden")
+    resultElem.innerHTML = rating
   }
 })
